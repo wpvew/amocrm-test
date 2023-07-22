@@ -1,0 +1,159 @@
+@import '@styles/var';
+
+.header {
+  padding: 58px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 192px minmax(530px, 642px) 159px 150px
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 52px;
+}
+
+.about {
+  position: absolute;
+  bottom: -32px;
+  max-width: 165px;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.navigation {
+  margin-right: auto;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.phone {
+  font-size: 16px;
+  font-weight: 500;
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+
+@media(max-width: 1110px) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .container {
+    grid-template-columns: 3fr 1fr;
+    row-gap: 20px;
+  }
+
+  .logo {
+    order: 1;
+    flex-direction: row;
+  }
+
+  .logoLink {
+    margin-right: 30px;
+  }
+
+  .about {
+    position: static;
+  }
+
+  .phone {
+    order: 2;
+    margin: 0;
+    justify-self: flex-end;
+  }
+
+  .navigation {
+    order: 3;
+  }
+
+  .social {
+    order: 4;
+    justify-self: flex-end;
+  }
+
+  .menu {
+    & > * {
+      margin-right: 20px !important;
+    }
+  }
+}
+
+@media(max-width: 620px) {
+  .container {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .logo {
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .logoLink {
+    margin: 0;
+  }
+
+  .about {
+    text-align: end;
+  }
+
+  .navigation {
+    margin: 0;
+  }
+
+  .menu {
+    justify-content: space-between;
+
+    & > * {
+      margin-right: 10px !important;
+    }
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .social {
+    display: none;
+  }
+}
+
+
+@media(max-width: 420px) {
+  .header {
+    background-color: #000;
+  }
+  .logo {
+    display: none;
+  }
+
+  .menu {
+    & > * {
+      margin-right: 0 !important;
+
+      &:nth-child(n + 5) {
+        display: none;
+      }
+    }
+  }
+}

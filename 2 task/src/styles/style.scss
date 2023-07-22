@@ -1,0 +1,41 @@
+@import './var', './mixin', './fonts';
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  @include reset;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-white;
+  background-color: $color-black;
+  background-image: url('../assets/images/Desktop.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ul, a, button {
+  @include reset;
+}
+
+button, a {
+  cursor: pointer;
+  color: $color-white;
+  &:disabled {
+    cursor: auto;
+    opacity: .3;
+    color: $color-black;
+    border-color: $color-black;
+  }
+}
+
+:focus {
+  outline: none;
+}

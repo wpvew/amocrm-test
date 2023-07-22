@@ -1,0 +1,61 @@
+@import '@styles/var';
+
+.list {
+  display: flex;
+}
+
+.item {
+  &:last-child {
+    margin: 0 !important;
+  }
+}
+
+.link {
+  color: currentColor;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+.fontS {
+  font-size: 12px;
+}
+.fontM {
+  font-size: 14px;
+}
+.fontL {
+  font-size: 16px;
+}
+
+@media(max-width: 1110px) {
+  .fontS {
+    font-size: 10px;
+  }
+  .fontM {
+    font-size: 12px;
+  }
+  .fontL {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .mobFontS {
+    font-size: 10px;
+  }
+  .mobFontM {
+    font-size: 12px;
+  }
+  .mobFontL {
+    font-size: 14px;
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+}
